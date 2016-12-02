@@ -1,0 +1,37 @@
+{
+  "contracts": "contracts",
+  
+  "deploy": ["ClaimAndEndorse"],
+  
+  "env": {
+    "block": {
+      "coinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+      "difficulty" : "0x0100",
+      "gasLimit" : 3141592,
+      "gasPrice": 60000000000
+    },
+    "accounts": {
+      "0x0b80612770101db7f47919628857d749fa7dd359": {
+        "balance": "0x1000000000000000000000000000000000000",
+        "pkey": "john",
+        "default": true
+      },
+      "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826": {
+        "balance": "0x1000000000000000000000000000000000000",
+        "nonce": "1430",
+        "pkey": "andy"
+      },
+      "0x084f6a99003dae6d3906664fdbf43dd09930d0e3": {
+        "balance": "0x1000000000000000000000000000000000000",
+        "pkey" : "alex"
+      },
+      "0x084f6a99003dae6d3906664fdbf43dd09930d0e3": {
+        "balance": 1234567890123345,
+        "deploy": {
+          "source": "contracts/ClaimAndEndorseWithStringsV2.sol",
+          "contract": "Identity"
+        }
+      }
+    }
+  }
+}
